@@ -1,1 +1,15 @@
-<keyboard>	<zero>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,0)</zero>	<one>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,1)</one>	<two>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,2)</two>	<three>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,3)</three>	<four>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,4)</four>	<five>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,5)</five>	<six>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,6)</six>	<seven>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,7)</seven>	<eight>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,8)</eight>	<nine>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,9)</nine></keyboard>
+<keyboard>
+	<zero>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,0)</zero>
+	<one>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,1)</one>
+	<two>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,2)</two>
+	<three>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,3)</three>
+	<four>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,4)</four>
+	<five>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,5)</five>
+	<six>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,6)</six>
+	<seven>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,7)</seven>
+	<eight>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,8)</eight>
+	<nine>XBMC.RunScript("/storage/rasplex-to-pseudo-channel-remote/remote-functions.py",channel_enter,9)</nine>
+  <pageup>XBMC.RunScript("/storage/remote/remote-functions.py", channel_up)</pageup>
+  <pagedown>XBMC.RunScript("/storage/remote/remote-functions.py", channel_down)</pagedown>
+  <play_pause>RunScript("/storage/remote/remote-functions.py", stop)</play_pause>
+</keyboard>
