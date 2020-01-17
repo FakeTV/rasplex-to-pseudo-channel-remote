@@ -8,6 +8,8 @@ import StringIO
 from config import *
 fullCmdArguments = sys.argv
 argumentList = fullCmdArguments[1:]
+def fileEmpty(leadButtonFileName):
+	return os.path.isfile(leadButtonFileName) and os.path.getsize(leadButtonFileName) > 0
 
 def stop():
 	contents = urllib2.urlopen("http://" + controller_ip + "/control.php?action=stop&tv=" + client_name).read()
@@ -34,7 +36,8 @@ def channel(channelNumber):
 	f = urllib2.urlopen(url)
 
 def channel_enter(buttonNumber):
-		if (time.time() - os.path.getmtime(leadButtonFileName) > 10):
+		isFileNumber=str(fileEmpty(leadButtonFileName))
+		if (time.time() - os.path.getmtime(leadButtonFileName) > 10 or isFileNumber == "False"):
 			leadButtonFile = open(leadButtonFileName,"w+")
 			leadButtonFile.write(buttonNumber)
 			leadButtonFile.close()
@@ -66,7 +69,9 @@ def channel_enter(buttonNumber):
 				headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 				f = urllib2.urlopen(url)
 				contents = urllib2.urlopen("http://" + controller_ip + "/control.php?action=channel&num=" + channelNumber + "&tv=" + client_name).read()
-
+			leadButtonFile = open(leadButtonFileName,"w+")
+                        leadButtonFile.write("")
+                        leadButtonFile.close()
 if (argumentList[0] == "stop"):
 	stop()
 elif (argumentList[0] == "channel_up"):
